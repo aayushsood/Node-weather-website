@@ -1,0 +1,13 @@
+h1 {
+  color: crimson;
+}
+
+.green {
+  color: green;
+}
+
+.imageStyles {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
