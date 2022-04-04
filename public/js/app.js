@@ -1,4 +1,3 @@
-console.log("Wassup");
 console.log("Hi this is console!");
 // try {
 //   fetch("http://puzzle.mead.io/puzzle").then((response) => {
