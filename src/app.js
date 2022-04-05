@@ -13,6 +13,7 @@ const port = process.env.PORT || 3000;
 
 console.log("Dir name ---- ", __dirname);
 console.log("File name ---- ", __filename);
+console.log(path.join(__dirname, "../public"));
 
 //Define paths for express config.
 const publicDirectoryPath = path.join(__dirname, "../public");

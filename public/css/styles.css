@@ -1,3 +1,10 @@
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
 h1 {
   color: crimson;
 }
@@ -10,4 +17,80 @@ h1 {
   width: 300px;
   height: 300px;
   object-fit: cover;
+}
+
+.headings{
+  color: #ffffff;
+  font-size: 2.5rem;
+  padding-top: 0.7rem;
+  margin-left: 0.8rem;
+}
+
+.links{
+  background-color: #FC9E4F;
+  margin-top: 0.7rem;
+  display: flex;
+  height: 8vh;
+  align-items: center;
+}
+
+.link{
+  color: #020122;
+  text-decoration: none;
+  font-size: 2rem;
+  margin-right: 1rem;
+  display: inline-block;
+  margin-left: 0.8rem;
+}
+
+.des-para{
+  margin-top: 0.7rem;
+  text-align: center;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+
+.body-background{
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url("../images/weatherimage.jpg")
+   ;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  color: #ffffff;
+  background-attachment: fixed;
+}
+
+.weather-input{
+  padding: 0.7rem;
+  border-radius: 0.2rem;
+  border: transparent;
+  width: 40%;
+}
+
+.weather-input::placeholder{
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+}
+
+.button{
+  padding: 0.7rem;
+  width: 10%;
+  background: #000;
+  color: #fff;
+  font-size: 1rem;
+  border: transparent;
+  border-radius: 0.2rem;
+  letter-spacing: 0.1rem;
+}
+
+.form{
+  text-align: center;
+  margin-top: 1.4rem;
+}
+
+.limit-width{
+  width: 50%;
+  margin: auto;
+  padding-top: 3rem;
 }
