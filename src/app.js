@@ -9,6 +9,7 @@ const forecast = require("./utils/forecast");
 //When we will call express it will return methods, which will be stored in app, which we can then use to set up our server
 
 const app = express();
+const port = process.env.PORT || 3000;
 
 console.log("Dir name ---- ", __dirname);
 console.log("File name ---- ", __filename);
@@ -122,6 +123,6 @@ app.get("*", (req, res) => {
 //---Route Three---
 //app.com/about
 
-app.listen(3000, () => {
-  console.log("Server is up on port 3000");
+app.listen(port, () => {
+  console.log("Server is up on port ", port);
 });

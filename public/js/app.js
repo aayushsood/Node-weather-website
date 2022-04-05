@@ -20,20 +20,18 @@ theForm.addEventListener("submit", (e) => {
   display.innerHTML = "Loading...";
   let location = theInput.value;
   console.log(location);
-  fetch(`http://localhost:3000/weather?address=${location}`).then(
-    (response) => {
-      console.log(response);
-      response.json().then((data) => {
-        if (data.error) {
-          console.log(data.error);
-          display.innerHTML = data.error;
-        } else {
-          console.log(data);
-          const { weatherDescription, temperature, location, feelslike } = data;
-          display.innerHTML = `Today, the temperature at ${location} is ${temperature} degree farenheit and it feels like ${feelslike} degree farenheit and it is ${weatherDescription} today.`;
-        }
-      });
-    }
-  );
+  fetch(`/weather?address=${location}`).then((response) => {
+    console.log(response);
+    response.json().then((data) => {
+      if (data.error) {
+        console.log(data.error);
+        display.innerHTML = data.error;
+      } else {
+        console.log(data);
+        const { weatherDescription, temperature, location, feelslike } = data;
+        display.innerHTML = `Today, the temperature at ${location} is ${temperature} degree farenheit and it feels like ${feelslike} degree farenheit and it is ${weatherDescription} today.`;
+      }
+    });
+  });
   //   console.log("Testing the output");
 });
