@@ -28,8 +28,14 @@ theForm.addEventListener("submit", (e) => {
         display.innerHTML = data.error;
       } else {
         console.log(data);
-        const { weatherDescription, temperature, location, feelslike } = data;
-        display.innerHTML = `Today, the temperature at ${location} is ${temperature} degree farenheit and it feels like ${feelslike} degree farenheit and it is ${weatherDescription} today.`;
+        const {
+          weatherDescription,
+          temperature,
+          location,
+          feelslike,
+          windSpeed,
+        } = data;
+        display.innerHTML = `Today, the temperature at ${location} is ${temperature} degree farenheit and it feels like ${feelslike} degree farenheit and it is ${weatherDescription} today. Also the wind speed is blowing around at ${windSpeed} km/h`;
       }
     });
   });

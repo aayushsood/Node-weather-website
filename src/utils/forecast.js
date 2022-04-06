@@ -20,13 +20,16 @@ const forecast = (latitude, longitude, callback) => {
       //       " degree farenheit"
       //   );
 
-      const { weather_descriptions, temperature, feelslike } =
+      // console.log(reponse.body.current);
+
+      const { weather_descriptions, temperature, feelslike, wind_speed } =
         response.body.current;
 
       callback(undefined, {
         weatherDescription: weather_descriptions[0],
         temperature,
         feelslike,
+        windSpeed: wind_speed,
       });
     }
 
